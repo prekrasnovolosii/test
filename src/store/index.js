@@ -24,6 +24,7 @@ export default createStore({
             commit('SET_ADDRESS', address)
             commit('ADD_HISTORY', { address, coordinates })
             localStorage.setItem('lastPoint', JSON.stringify({ address, coordinates }))
+            console.log('Адрес', address)
         }
 	}
 })

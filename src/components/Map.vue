@@ -1,6 +1,6 @@
 <template>
 <yandex-map @map-was-initialized="initializeMap" @click.self="setPoint" :coords="center" :zoom="10">
-	<ymap-marker v-if="point" marker-id="marker" :coords="point" />
+	<ymap-marker v-if="point" marker-id="marker" :hint-content="address" :coords="point" />
 </yandex-map>
 </template>
 
@@ -23,7 +23,8 @@ export default {
 		...mapState([
 			'center',
 			'mkad',
-			'point'
+			'point',
+			'address'
 		])
 	},
 	methods: {
